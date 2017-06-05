@@ -16,7 +16,7 @@ News headline dataset:
 
 ![](http://i.imgur.com/pPZoQfO.png)
 
-Since the sets of vocabulary seem to be very different for click-bait and news, all headlines were converted to features using a TD-IDF model. The following Machine Learning techniques were subsequently tested:
+Since the vocabulary sets seem to be distinct for click-bait and news, all headlines were converted to features using a TD-IDF model. The following Machine Learning techniques were subsequently tested:
 
 - Decision Trees
 - Nearest Neighbor

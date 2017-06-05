@@ -1,32 +1,35 @@
-## Clickbait or not?
-### EECS 349: Machine Learning - Final Project
+# Clickbait or not?
+## EECS 349: Machine Learning, Northwestern University
 
-Charikleia Iakovidou, Northwestern University
-
+Charikleia Iakovidou <br>
 e-mail: chariako [at] nu [dot] northwestern [dot] edu
 
-The purpose of this project is to investigate whether it is possible to identify a “click-bait” article using ML techniques with only the article headline is an input. According to Oxford dictionaries, a click-bait is defined as “content whose main purpose is to attract attention and encourage visitors to click on alink to a particular web page”. However, there is still no absolute consensus on what a click-bait is and definitions are often subjective. Most people generally agree that click-bait headlines are eye-catching and promise a thrilling experience, while the actual content tends to be trivial or inaccurate. Legitimate news websites also employ sensationalist headlines from time to time and occasionally publish more light-hearted material. Do those articles qualify as click-baits or not? The answer is unclear.
+The goal of this project was to investigate whether it is possible to identify a “click-bait” article using Machine Learning techniques, with only the article headline is input. According to [Oxford dictionaries](https://en.oxforddictionaries.com/definition/clickbait), a click-bait is defined as “content whose main purpose is to attract attention and encourage visitors to click on a link to a particular web page”. While click-baits promise a thrilling, sensational experience, their content is usually low-quality, misleading or inaccurate. The heavy advertising combined with click-baits and the overwhelming amount of links they often contain are also concerning. [Some](https://www.theguardian.com/media/2016/jul/12/how-technology-disrupted-the-truth) even consider click-baits to be a serious threat to the future of journalism.
 
-In this project, a click-bait will be defined by its trivial content. Consider these headlines
+It's fairly easy for humans to distinguish click-baits from legitimate news. While one must take into account various factors to classify certain content as click-bait, the headlines by themselves are often revealing since they follow specific patterns in structure and vocabulary. The click-bait headline dataset was constructed by crawling [FuzzFix](http://www.fuzzfix.com/), [CooBuzz](http://www.coobuzz.com/) and [WorthyToShare](http://www.worthytoshare.com/), while the news headlines were collected using the [Guardian Open Platform](http://open-platform.theguardian.com/) and the [NYT Developers Network](https://developer.nytimes.com/). Both datasets can be visualized using [word clouds](https://www.jasondavies.com/wordcloud/):
 
-"Photographer Captures Hilarious Moments Of Dogs Trying To Eat Peanut Butter” <br>
-"Is This The Biggest Bovine In Australia? You'll Have To See It To Believe It!"<br>
-“5 Celebrities You Didn't Know Had Dark Sides”
+Click-bait headline dataset:
 
-vs. these headlines:
+![](http://i.imgur.com/6UOw4hw.png)
 
-"West African Leaders to Visit Gambia President Again Amid Crisis” <br>
-"Exclusive: Airbus May Post 8 Percent Rise in 2016 Deliveries, Narrow Gap With Boeing"<br>
-“Migrants Battle Freezing Temperatures and Cold Shoulder at Hungarian Border"
+News headline dataset:
 
-It is fairly easy to see that the first 3 articles do not contain important information, unlike the last 3 ones.
+![](http://i.imgur.com/pPZoQfO.png)
 
-There are many reasons why filtering out click-baits could be useful, their poor quality content being the primary one. Some experts consider click-baits a threat to the future of journalism, as they decrease the profit of legitimate news sources and the revenue of professional journalists while shifting the focus away from actual news. Many are also concerned with the heavy advertising usually combined with click-baits and its effects on those exposed to it. The fact remains however, that click-baits are dishonest and commonly result in a waste of time; even when users willingly seek entertaining content, they often have to click on a substantial number of links to get it and the outcome usually does not live up to expectation.
+Since the sets of vocabulary seem to be very different for click-bait and news, all headlines were converted to features using a TD-IDF model. The following Machine Learning techniques were subsequently tested:
 
-The task at hand is a binary classification task, so the outputs belong in the set {0,1} characterizing non-click-bait and click-bait headlines respectively. The inputs are click-bait and news headlines represented using a Bag of Words model (TF-IDF).
+- Decision Trees
+- Nearest Neighbor
+- Multi-layer Perceptron
+- Naive Bayes Classifier
+- Logistic Regression
 
-This will be replaced with a figure someday:
+The 10-fold cross validation accuracy and test accuracy are shown in the table bellow:
 
-![This will be replaced with a figure someday](http://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e35/c9.0.1061.1061/13392900_836520003119649_764459364_n.jpg?ig_cache_key=MTI2NDkyNzQxMDY3ODk3MTgwNA%3D%3D.2.c)
+Table
+
+Results blabla
+Figures blabla
 
 [Download full report](https://www.youtube.com/watch?v=nSc5-RkndnQ)
+

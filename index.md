@@ -35,7 +35,7 @@ It is interesting to see how each classifier performed per output class. This is
 
 ![](http://i.imgur.com/TQDS0hV.png)
 
-NBC is the best at identifying click-baits (97.89%), while MLP, LR and SVM achieved comparable accuracy in detecting news (~95%), with SVM performing the best. DT, NN, NBC and LR appear to be somewhat (or highly) biased, while MLP and SVM perform more or less equally well for both categories. A possible explanation lies in the characteristics of each dataset; while there are more words in the click-bait dataset in general, the news dataset contains considerably more unique words and therefore greater variation. Certain techniques might be more sensitive to the low variance of the click-bait dataset than the high variance of the news dataset and vice versa. A slightly greater number of click-bait examples (~300) in the training set might also cause some techniques to favor the click-bait output class.
+NBC is the best at identifying click-baits (97.89%), while MLP, LR and SVM achieved comparable accuracy in detecting news (~95%), with SVM performing the best. DT, NN, NBC and LR appear to be somewhat (or highly) biased, while MLP and SVM perform more or less equally well for both categories. A possible explanation lies in the characteristics of each dataset; while there are more words in the click-bait dataset in general, the news dataset contains considerably more unique words and therefore greater variation. The high variance of the news dataset might result in greater error for some techniques. A slightly greater number of click-bait examples (~300) in the training set might also cause some techniques to favor the click-bait output class.
 
 [Download full report](https://northwestern.box.com/s/p88t74q4awrmk4mitfhzl7qst8rfh2qn)
 

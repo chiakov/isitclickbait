@@ -16,24 +16,26 @@ News headline dataset:
 
 ![](http://i.imgur.com/pPZoQfO.png)
 
-Since the vocabulary sets seem to be distinct for click-bait and news, all headlines were converted to features using a TD-IDF model. The following Machine Learning techniques were subsequently tested:
+Since the vocabulary sets seem to be distinct for click-bait and news, all headlines were converted to sparse vector features using a TD-IDF model. The following Machine Learning techniques were subsequently tested:
 
-- Decision Trees
-- Nearest Neighbor
-- Multi-layer Perceptron
-- Naive Bayes Classifier
-- Logistic Regression
-- Linear SVM
+- Decision Trees (DT)
+- Nearest Neighbor (NN)
+- Multi-layer Perceptron (MPL)
+- Naive Bayes Classifier (NBC)
+- Logistic Regression (LR)
+- Linear SVM (SVM)
 
-The train/test data ratio was 80/20% in all cases. The 10-fold cross validation and test accuracies for all methods are shown bellow:
+The train/test data ratio was 80/20% in all cases. Hyperparameters were tuned using 10-fold cross validation. The 10-fold cross validation and test accuracies for all methods are shown bellow:
 
 ![](http://i.imgur.com/fS7LM8m.png)
 
-The following graph shows the correctly classified instances for each output class:
+MLP achieved the best accuracy on the testing set (95.22%), followed closely by SVM (95.04%) and NBC (95.00%). However, it also required significantly more training time. The DT was the worst performing classifier (89.05%). Since the number of features (12306) is much larger than the number of training examples (9282), the methods that are more robust to the "curse of dimensionality" and scale better achieved better performance. 
+
+It is interesting to see how each classifier performed per output class. This is shown in the following graph:
 
 ![](http://i.imgur.com/TQDS0hV.png)
 
-Results blabla
+NBC is the best at identifying click-baits (97.89%), while MLP, LR and SVM achieved comparable accuracy in detecting news (~95%), with SVM performing the best. DT, NN, NBC and LR appear to be somewhat (or highly) biased, while MLP and SVM perform more or less equally well for both categories. A possible explanation lies in the characteristics of each dataset; while there is a much higer number of words in the click-bait dataset in general, the news dataset contains considerably more unique words and therefore greater variety. Certain techniques might be more sensitive to the low variance of the click-bait dataset than the high variance of the news dataset and vice versa. A slightly greater number of click-bait examples (~300) in the training set might also cause some techniques to favor the click-bait output class.
 
 [Download full report](https://www.youtube.com/watch?v=nSc5-RkndnQ)
 

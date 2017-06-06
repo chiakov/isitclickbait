@@ -23,16 +23,15 @@ Since the vocabulary sets seem to be distinct for click-bait and news, all headl
 - Multi-layer Perceptron
 - Naive Bayes Classifier
 - Logistic Regression
+- Linear SVM
 
-The train/test data ratio was 80/20% in all cases. The 10-fold cross validation and test accuracies are shown in the figures bellow:
+The train/test data ratio was 80/20% in all cases. The 10-fold cross validation and test accuracies for all methods are shown in the figures bellow:
 
-Figure1
+![](http://i.imgur.com/fS7LM8m.png)
 
-Figure2
+The following graph shows the correctly classified instances for each output class:
 
-The following graph shows the correctly classified instances for each output class (click-bait, news):
-
-Figure 3
+![](http://i.imgur.com/TQDS0hV.png)
 
 Results blabla
 

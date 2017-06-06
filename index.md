@@ -25,7 +25,7 @@ Since the vocabulary sets seem to be distinct for click-bait and news, all headl
 - Logistic Regression
 - Linear SVM
 
-The train/test data ratio was 80/20% in all cases. The 10-fold cross validation and test accuracies for all methods are shown in the figures bellow:
+The train/test data ratio was 80%/20% in all cases. The 10-fold cross validation and test accuracies for all methods are shown bellow:
 
 ![](http://i.imgur.com/fS7LM8m.png)
 

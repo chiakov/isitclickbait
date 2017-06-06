@@ -25,7 +25,7 @@ Since the vocabulary sets seem to be distinct for click-baits and news, all head
 - Logistic Regression (LR)
 - Linear SVM (SVM)
 
-The train/test data ratio was 80/20% in all cases. The hyperparameters were tuned using 10-fold cross validation. The 10-fold cross validation and test accuracies for all methods are shown bellow:
+The train/test data ratio was 80/20% in all cases. The hyperparameters were tuned using 10-fold cross validation. The 10-fold cross validation and test accuracies for all methods are shown bellow (ZR = ZeroR):
 
 ![](http://i.imgur.com/fS7LM8m.png)
 
